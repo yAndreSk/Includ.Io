@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Configurações - INCLUD.IO</title>
+    
+    <link rel="stylesheet" href="../libs/bootstrap.min.css">
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container mt-4 mb-4" style="max-width: 720px;">
+        <header class="pb-3 mb-4 border-bottom">
+            <h1 class="d-flex align-items-center">
+                <img src="../icons/icon48.png" alt="Logo" width="40" height="40" class="me-3">
+                Configurações INCLUD.IO
+            </h1>
+        </header>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings-panel" type="button" role="tab">Configurações de Voz</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="account-tab" data-bs-toggle="tab" data-bs-target="#account-panel" type="button" role="tab">Conta e Sincronização</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            
+            <div class="tab-pane fade show active" id="settings-panel" role="tabpanel">
+                <div class="card card-body border-top-0 rounded-bottom">
+                    <h2 class="h5">Configurações de Voz (TTS)</h2>
+                    <div class="mb-3">
+                        <label for="voice-select" class="form-label">Voz Preferida:</label>
+                        <select id="voice-select" class="form-select"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rate-slider" class="form-label">Velocidade: <span id="rate-value">1.0</span>x</label>
+                        <input type="range" class="form-range" id="rate-slider" min="0.5" max="2" step="0.1" value="1.0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pitch-slider" class="form-label">Tom (Pitch): <span id="pitch-value">1.0</span></label>
+                        <input type="range" class="form-range" id="pitch-slider" min="0.5" max="2" step="0.1" value="1.0">
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="d-flex align-items-center">
+                        <button id="save-button" class="btn btn-primary btn-lg">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                            <span class="button-text">Salvar Configurações</span>
+                        </button>
+                        <div id="save-status-wrapper" class="ms-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="account-panel" role="tabpanel">
+                
+                <div class="card card-body border-top-0 rounded-bottom" id="login-form-container">
+                    <h2 class="h5">Sincronizar Configurações</h2>
+                    <p class="text-muted">Crie uma conta para salvar as suas configurações na nuvem e usá-las em qualquer dispositivo.</p>
+                    
+                    <div id="auth-status-wrapper" class="mb-3"></div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary" id="btn-login">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                            <span class="button-text">Login</span>
+                        </button>
+                        <button class="btn btn-secondary" id="btn-register">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                            <span class="button-text">Registar</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card card-body border-top-0 rounded-bottom" id="logged-in-container" style="display: none;">
+                    <div class="alert alert-success">
+                        <h5 class="alert-heading">Conta Conectada</h5>
+                        <p class="mb-0">Você está conectado como: <strong id="user-email"></strong>. As suas configurações estão a ser salvas e sincronizadas automaticamente.</p>
+                    </div>
+                    <button class="btn btn-danger" id="btn-logout" style="max-width: 150px;">Desconectar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="../libs/bootstrap.bundle.min.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>

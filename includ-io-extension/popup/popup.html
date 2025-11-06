@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-pt" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>INCLUD.IO</title>
+    <link rel="stylesheet" href="../libs/bootstrap.min.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container-fluid p-3">
+        <header class="d-flex align-items-center justify-content-between mb-3">
+            <h5 class_alias="d-flex align-items-center mb-0">
+                <img src="../icons/icon48.png" alt="Logo" width="32" height="32" class="me-2">
+                INCLUD.IO
+            </h5>
+            <a href="#" id="btnOptions" class="btn btn-sm btn-outline-secondary" title="Configurações">
+                <i class="bi bi-gear-fill"></i>
+            </a>
+        </header>
+
+        <div class="btn-group w-100 mb-3" role="group">
+            <button type="button" class="btn btn-primary" id="btnPlayPause" aria-label="Ler / Pausar">
+                <i class="bi bi-play-fill"></i> <span id="playPauseText">Ler</span>
+            </button>
+            <button type="button" class="btn btn-danger" id="btnStop" aria-label="Parar">
+                <i class="bi bi-stop-fill"></i>
+            </button>
+        </div>
+
+        <ul class="list-group list-group-flush rounded-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>
+                    <i class="bi bi-ear-fill me-2 text-primary"></i>
+                    Clique para Ouvir
+                </span>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchClickToRead">
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>
+                    <i class="bi bi-book-half me-2 text-primary"></i>
+                    Modo de Leitura
+                </span>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchReaderMode">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <label for="selectContrast" class_alias="form-label-sm mb-1">
+                    <i class="bi bi-circle-half me-2 text-primary"></i>
+                    Contraste
+                </label>
+                <select class="form-select form-select-sm mt-1" id="selectContrast">
+                    <option value="none">Padrão</option>
+                    <option value="high-contrast">Alto Contraste</option>
+                    <option value="inverted">Cores Invertidas</option>
+                    <option value="desaturated">Dessaturado</option>
+                </select>
+            </li>
+            <li class="list-group-item">
+                <label class="form-label-sm mb-1">
+                    <i class="bi bi-fonts me-2 text-primary"></i>
+                    Tamanho da Fonte
+                </label>
+                <div class="btn-group w-100 mt-1">
+                    <button class="btn btn-sm btn-outline-secondary" id="btnFontDecrease" aria-label="Diminuir fonte">
+                        <i class="bi bi-dash-lg"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" id="btnFontReset" aria-label="Resetar fonte">
+                        <span id="fontPercentage">100%</span>
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" id="btnFontIncrease" aria-label="Aumentar fonte">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../libs/bootstrap.bundle.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>INCLUD.IO - Informações</title>
+  <link rel="icon" href="Icon_Site.png" type="image/x-icon">
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --accent: #1a73e8;
+      --accent-2: #2b6ef6;
+      --muted: #6b7280;
+      --success: #16a34a;
+      --danger: #ef4444;
+      --radius: 12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fbfdff 0%, #f0f4ff 100%);
+      color: #0f172a;
+      display: flex;
+      justify-content: center;
+      padding: 36px 16px;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 980px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 36px rgba(15, 23, 42, 0.08);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center; /* Centraliza todo o conteúdo */
+    }
+
+    .left {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .icon {
+      width: 116px;
+      height: 116px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 44px;
+      box-shadow: 0 10px 30px rgba(26, 115, 232, 0.14);
+    }
+
+    .meta {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #071033;
+    }
+
+    .byline {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    footer {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* Estilos para a seção 'Nossos Criadores' */
+    #team {
+      margin-top: 40px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap; /* Para responsividade */
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px; /* Bordas arredondadas */
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-info {
+      margin-top: 10px;
+    }
+
+    .team-info strong {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .team-number {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #1a73e8;
+      color: white;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      .container {
+        flex-direction: column;
+        padding: 18px;
+      }
+      .left {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+      }
+      .icon {
+        width: 76px;
+        height: 76px;
+        font-size: 28px;
+        border-radius: 12px;
+      }
+      .team-members {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>INCLUD.IO - Informações</h1>
+    </header>
+
+    <section id="about-project">
+      <h2 style="text-align:center;">O que é o INCLUD.IO?</h2>
+      <p>
+        O INCLUD.IO é uma extensão de navegador criada para promover a acessibilidade digital. Focada especialmente em pessoas com deficiências visuais, a ferramenta visa melhorar a experiência de aprendizagem na web, tornando-a mais inclusiva e eficiente.
+      </p>
+      <h3>Por que foi criado?</h3>
+      <p>
+        Apesar dos avanços tecnológicos na educação digital, muitos estudantes com deficiências visuais ainda enfrentam dificuldades para acessar conteúdos acadêmicos e educacionais de forma autônoma. Percebendo esse desafio, um grupo de estudantes de Engenharia de Software se uniu para criar uma ferramenta acessível que, além de melhorar o acesso à informação, promova a participação ativa desses estudantes no processo de aprendizagem.
+      </p>
+      <h3>E o nosso objetivo?</h3>
+      <p>
+        Espera-se que, com essa extensão, mais pessoas com deficiência visual possam acessar conteúdo educacional de forma autônoma e eficiente, participando ativamente do processo de aprendizado, sem as barreiras que muitas vezes surgem devido à falta de suporte adequado.
+      </p>
+      <h3>Funcionalidades do INCLUD.IO</h3>
+      <p><h4>Leitura Automática de Textos:</h2> Usando a Web Speech API, a extensão permite a leitura de textos em voz alta.</p>
+      <p><h4>Navegação Facilitada:</h2> Com a ajuda da biblioteca ally.js, garantimos que a navegação seja intuitiva e eficiente.</p>
+      <p><h4>Acessibilidade Completa:</h2> Focada em facilitar o uso por leitores de tela e melhorar a navegação por teclado, a ferramenta foi projetada para ser compatível com diferentes tecnologias assistivas.</p>
+    </section>
+
+    <section id="team">
+      <div class="team-title">Nossos Criadores</div>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="꩜ _ᐟ.jpg" alt="Aluno 1" class="team-photo">
+          <div class="team-info">
+            <strong> <a href="https://www.linkedin.com/in/andr%C3%A9-augusto-9476a230a/">André Augusto Silva Domingues</a></strong>
+            <p class="team-number">24503152-2</p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <img src="kenma.jpg" alt="Aluno 2" class="team-photo">
+          <div class="team-info">
+            <strong> <a href="https://www.linkedin.com/in/l%C3%ADvia-maschietto-boneti-3185a3304/">Lívia Maschietto Boneti</a></strong>
+            <p class="team-number">24000749-2</p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <img src="Toothless - How to train your dragon 2.jpg" alt="Aluno 3" class="team-photo">
+          <div class="team-info">
+            <strong><a href="https://www.linkedin.com/in/maria-eduarda-bellarmino-duarte-4b1a36304/">Maria Eduarda Bellarmino Duarte</a></strong>
+            <p class="team-number">24036202-2</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-us" style="margin-top: 30px; text-align: center; max-width: 700px;">
+      <h2 style="color: var(--accent); font-weight: bold; margin-bottom: 12px;">Sobre Nós</h2>
+      <p style="color: var(--muted); font-size: 16px; line-height: 1.5;">
+        Somos um grupo de estudantes apaixonados por tecnologia e inclusão. Nosso objetivo com o INCLUD.IO é tornar o conhecimento acessível para todos, especialmente para pessoas com deficiência visual. Acreditamos que a educação digital deve ser um espaço de igualdade e oportunidades, e por isso dedicamos nosso tempo e esforço para desenvolver soluções que realmente façam a diferença.
+      </p>
+    </section>
+
+    <a href="index.html" class="cta-button">Voltar para a Página Inicial</a>
+
+    <footer>
+      <p>Projeto acadêmico | INCLUD.IO | © 2025</p>
+    </footer>
+  </div>
+</body>
+</html>

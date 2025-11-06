@@ -1,0 +1,43 @@
+/* content/visual-styles.css */
+
+/* Classe de Destaque de Leitura */
+.includio-tts-highlight {
+    background-color: #0d6efd !important;
+    color: white !important;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+/* Cursor para modo "Clique para Ouvir" */
+body.includio-click-to-read {
+    cursor: help;
+}
+body.includio-click-to-read *:hover {
+    outline: 1px dashed #0d6efd;
+}
+
+/* ----- CONTROLOS DE CONTRASTE ----- */
+html[data-includio-contrast="high-contrast"] {
+    filter: contrast(1.75) !important;
+}
+html[data-includio-contrast="inverted"] {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+/* Corrige imagens/vídeos invertidos */
+html[data-includio-contrast="inverted"] img,
+html[data-includio-contrast="inverted"] video,
+html[data-includio-contrast="inverted"] svg {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+html[data-includio-contrast="desaturated"] {
+    filter: grayscale(1) !important;
+}
+
+/* ----- CONTROLOS DE FONTE ----- */
+:root {
+    --includio-font-scale: 1.0; /* 1.0 = 100% */
+}
+html[data-includio-font-size] body {
+    /* Multiplica o tamanho da fonte base pelo nosso 'scale' */
+    font-size: calc(1em * var(--includio-font-scale));
+}
