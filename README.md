@@ -21,7 +21,7 @@ A extensão **INCLUD.IO** adiciona funcionalidades de acessibilidade e um simula
 
 #### 📦 Instalação
 
-1.  Baixe o arquivo **includio-extension.zip** na aba [📥 Releases](https://github.com/yAndreSk/Includ.Io/releases).
+1.  Baixe o arquivo **includio-extension.zip** na aba [📥 Releases](https://github.com/yAndreSk/Includ.Io/releases/tag/version).
 2.  Extraia o .zip em uma pasta de sua escolha.
 3.  No navegador **Chrome** ou **Edge**, acesse: `chrome://extensions/`
 4.  Ative o **Modo do desenvolvedor** (canto superior direito).
@@ -29,7 +29,7 @@ A extensão **INCLUD.IO** adiciona funcionalidades de acessibilidade e um simula
 6.  Selecione a pasta extraída da extensão.
 
 ✅ Pronto! A extensão **INCLUD.IO** aparecerá na barra de ferramentas e estará pronta para uso.
-Você poderá abrir o painel copiando o repositório e testar o **Simulador de Download**, que simula a instalação da extensão.
+Você poderá abrir o painel na aba release no em [📥 Simulador](https://github.com/yAndreSk/Includ.Io/releases/tag/Simulator) e testar o **Simulador de Download**, que simula a instalação da extensão.
 
 ---
 
